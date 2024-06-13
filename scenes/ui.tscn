@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=3 uid="uid://bypkjpp8bq30t"]
+
+[ext_resource type="Script" path="res://scenes/ui_manager.gd" id="1_adcp4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eys67"]
+font_size = 36
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adcp4")
+
+[node name="QuitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 60.0
+offset_bottom = 41.0
+text = "QUIT
+"
+
+[node name="OpenSaveButton" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "OPEN SAVE DIR"
+
+[node name="VBoxContainerMain" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -60.0
+offset_right = 53.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainerHeaderI" type="HBoxContainer" parent="VBoxContainerMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SaveButtonIni" type="Button" parent="VBoxContainerMain/HBoxContainerHeaderI"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "SAVE (INI)"
+
+[node name="LoadButtonIni" type="Button" parent="VBoxContainerMain/HBoxContainerHeaderI"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "LOAD (INI)"
+
+[node name="HBoxContainerHeaderR" type="HBoxContainer" parent="VBoxContainerMain"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SaveButton" type="Button" parent="VBoxContainerMain/HBoxContainerHeaderR"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "SAVE"
+
+[node name="LoadButton" type="Button" parent="VBoxContainerMain/HBoxContainerHeaderR"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "LOAD"
+
+[node name="Label" type="Label" parent="VBoxContainerMain"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "0"
+label_settings = SubResource("LabelSettings_eys67")
+horizontal_alignment = 1
+
+[node name="HBoxContainerFooter" type="HBoxContainer" parent="VBoxContainerMain"]
+layout_mode = 2
+alignment = 1
+
+[node name="SubtractButton" type="Button" parent="VBoxContainerMain/HBoxContainerFooter"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "-"
+
+[node name="AddButton" type="Button" parent="VBoxContainerMain/HBoxContainerFooter"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+text = "+"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OpenSaveButton" to="." method="_on_open_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerHeaderI/SaveButtonIni" to="." method="_on_save_button_ini_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerHeaderI/LoadButtonIni" to="." method="_on_load_button_ini_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerHeaderR/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerHeaderR/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerFooter/SubtractButton" to="." method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="VBoxContainerMain/HBoxContainerFooter/AddButton" to="." method="_on_add_button_pressed"]
