@@ -71,3 +71,5 @@ func _on_load_button_ini_pressed():
 		number = ini_data.get_value("Player", "number", 0) # The fallback value is 0 even if the specified value isn't found in the ini file.
 	else:
 		print("No save file found.")
+
+# To save with encryption, use save_encrypted_pass() instead of save(), where the passkey parameter is a string of your choice. Load using load_encrypted_pass instead of load().
