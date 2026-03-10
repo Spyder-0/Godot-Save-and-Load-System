@@ -7,3 +7,7 @@ A simple demonstration of how saving and loading is implemented in Godot (4+). T
 # Documentation
 - Tutorial: https://forum.godotengine.org/t/how-to-load-and-save-things-with-godot-a-complete-tutorial-about-serialization/44515
 - Data Paths: https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html#accessing-persistent-user-data-user
+
+# Support the Project
+Liked the project? Your support would mean a lot! <br/>
+- Bitcoin Address: `bc1qxhww6cqhggxn85fl92m8pn4vpp4493wgqnju2s`
