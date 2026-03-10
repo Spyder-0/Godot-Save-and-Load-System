@@ -10,4 +10,4 @@ A simple demonstration of how saving and loading is implemented in Godot (4+). T
 
 # Support the Project
 Liked the project? Your support would mean a lot! <br/>
-- Bitcoin Address: `bc1qxhww6cqhggxn85fl92m8pn4vpp4493wgqnju2s`
+- Bitcoin Address (BTC): `bc1qxhww6cqhggxn85fl92m8pn4vpp4493wgqnju2s`
